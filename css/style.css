@@ -1,0 +1,278 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Pragmatica-Light;
+    src: url("/fonts/Pragmatica-Light_36332.ttf");
+}
+@font-face {
+    font-family: Pragmatica-Bold;
+    src: url("/fonts/Pragmatica-Bold_36314.ttf");
+}
+@font-face {
+    font-family: Pragmatica-ExtraBold;
+    src: url("/fonts/Pragmatica-ExtraBold_36320.ttf");
+}
+@font-face {
+    font-family: Pragmatica-ExtraLight;
+    src: url("/fonts/Pragmatica-ExtraLight_36322.ttf");
+}
+@font-face {
+    font-family: Pragmatica-ExtraLight-Oblique;
+    src: url("/fonts/Pragmatica-ExtraLight-Oblique_36321.ttf");
+}
+@font-face {
+    font-family: Pragmatica-Medium;
+    src: url("/fonts/Pragmatica-Medium_36334.ttf");
+
+}
+
+body {
+    color:white;
+	margin: 2em;
+    font-family: Pragmatica-Light;
+    text-align: center;
+    min-height: 100vh; /* (mal:provoca scroll, 100% deja blanco abajo) */
+    padding-bottom: 2em;
+    border: 5px solid red;
+
+}
+
+#home {
+    background-image: url("/img/mobileHome.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+#info {
+    background-color: #AFCBCD;
+}
+
+#menu{
+    background-color: #AFCBCD;
+}
+
+#contacto{
+    background-color: #94AB9B;
+}
+
+h1 {
+    font-family: Pragmatica-Light;
+    font-size: 26px;
+    color: white;
+}
+
+p {
+    font-family: Pragmatica-ExtraLight;
+    font-size: 18px;
+    color: white;
+}
+
+a:link {
+    text-decoration:none;
+}
+
+/* a:visited {
+    color: black;
+} */
+
+/****** Barra header *****/
+
+.desktop {
+    display:none;
+}
+
+.headerMobile {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+}
+
+.logoHaizea {
+    width: 20%;
+    position: absolute;
+    top:5px;
+    left: 0px;
+}
+
+.hambImg {
+    width: 7%;
+    position: absolute;
+    top:5px;
+    right:7px; 
+}
+
+.closeImg {
+    width: 30px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* home */
+.homeMainContainer {
+    font-size: xx-large;
+    color: white;
+    position:fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* menu */
+.menu{
+    list-style: none;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align: center;
+    min-height: 90%;
+}
+
+/* info */
+.imgInfo {
+    width: 100%;
+}
+
+.infoContainer {
+    position:fixed;
+    top: 10%;
+    height: 80%;
+    width: 85%;
+    overflow: scroll;
+}
+
+.infoText {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.infoContainer p {
+    text-align: left;
+}
+
+/* contacto */
+.contactoContainer {
+    position:fixed;
+    top: 10%;
+    height: 80%;
+    width: 85%;
+}
+
+.contactoContainer p {
+    font-family: Pragmatica-ExtraLight;
+    font-size: 14px;
+    text-align: left;
+}
+
+.contactoContainer span {
+    font-family: Pragmatica-ExtraLight-Oblique;
+    font-size: 14px;
+    text-align: left;
+}
+
+.contactoContainer form {
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+.contactoContainer input {
+    background-color:rgba(0, 0, 0, 0);
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid white;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.contactoContainer button {
+    background-color:rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    color:white;
+}
+
+.footerMobile a {
+    font-family: Pragmatica-ExtraLight;
+    font-size: 14px;
+    color:white;
+}
+
+.infolink {
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+}
+
+.reservalink {
+    position: absolute;
+    bottom: 2em;
+    right: 2em; /*calc ancho imagen*/
+
+}
+
+/* *** desktop layout  *** */
+@media only screen and (min-width:480px) {
+
+    .mobile {
+        display: none;
+    }
+    
+    #home {
+        background-image: url("/img/desktopHome.JPG");
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+
+    /* body {
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh-20px-20px); 
+        margin-bottom: 2em;
+    } */
+
+    .headerDesktop {
+        font-family: Pragmatica-ExtraLight;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        height: 20px;
+    }
+
+    .footerDesktop {
+        color: white;
+        margin-top: auto;
+    
+    }
+    
+    .pepe{
+        height: 200px;
+    }
+    /* .barOnBottomDesk {
+        font-family: Pragmatica-ExtraLight;
+        display: flex;
+        justify-content: space-between;
+    } */
+    /* .footerDesktop {
+         margin-top: auto;  
+         height: 20px;    
+    } */
+
+}
