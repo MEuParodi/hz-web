@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/**** fonts ****/
 @font-face {
     font-family: Pragmatica-Light;
     src: url("/fonts/Pragmatica-Light_36332.ttf");
@@ -31,16 +32,50 @@
 }
 
 body {
-    color:white;
-	margin: 2em;
     font-family: Pragmatica-Light;
-    text-align: center;
-    min-height: 100vh; /* (mal:provoca scroll, 100% deja blanco abajo) */
-    padding-bottom: 2em;
-    border: 5px solid red;
+    color:white;
+    font-size: 12px;
+    display: flex;
+    height: 100%;
+    min-height: 100vh; 
+}
+
+/**** layout ****/
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    border: solid 5px blue;
 
 }
 
+main {
+    position: absolute;
+    top: 70px;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    border: solid 5px green;
+}
+
+footer {
+    font-family: Pragmatica-Light;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    border: solid 5px red;
+    color: white;
+}
+
+.desktop {
+    display:none;
+}
+
+/**** backgrounds ****/
 #home {
     background-image: url("/img/mobileHome.jpg");
     background-repeat: no-repeat; 
@@ -59,6 +94,7 @@ body {
     background-color: #94AB9B;
 }
 
+/**** generales ****/
 h1 {
     font-family: Pragmatica-Light;
     font-size: 26px;
@@ -73,6 +109,7 @@ p {
 
 a:link {
     text-decoration:none;
+    color:white;
 }
 
 /* a:visited {
@@ -81,30 +118,35 @@ a:link {
 
 /****** Barra header *****/
 
-.desktop {
-    display:none;
-}
 
 .headerMobile {
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+    /* position: fixed;
     top: 0px;
     width: 100%;
     z-index: 1000;
-    position: relative;
+    position: relative; */
 }
 
 .logoHaizea {
-    width: 20%;
-    position: absolute;
+    width: 30%;
+    padding-top: 15px;
+    padding-left: 5px;
+
+    /* position: absolute;
     top:5px;
-    left: 0px;
+    left: 0px; */
 }
 
 .hambImg {
-    width: 7%;
-    position: absolute;
-    top:5px;
-    right:7px; 
+    position: fixed;
+    top:30px;
+    right: 20px;
+    width: 30px;
+    margin-bottom: 0px;
 }
 
 .closeImg {
@@ -114,23 +156,25 @@ a:link {
 }
 
 .close{
-    display: flex;
+    position: fixed;
+    top:10px;
+    right: 20px;
+
+    /* display: flex;
     justify-content: flex-end;
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 0; */
 }
 
 /* home */
-.homeMainContainer {
-    font-size: xx-large;
-    color: white;
-    position:fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%);
-}
 
-/* menu */
+.subContainer{
+        position:fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;  
+}
 .menu{
     list-style: none;
     display:flex;
@@ -138,6 +182,8 @@ a:link {
     justify-content:space-between;
     text-align: center;
     min-height: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* info */
@@ -146,11 +192,14 @@ a:link {
 }
 
 .infoContainer {
-    position:fixed;
+    overflow-y: scroll ;
+    margin: 0 5px 0 5px;
+
+    /* position:fixed;
     top: 10%;
     height: 80%;
-    width: 85%;
-    overflow: scroll;
+ 
+    overflow: scroll; */
 }
 
 .infoText {
@@ -163,17 +212,12 @@ a:link {
 }
 
 /* contacto */
-.contactoContainer {
-    position:fixed;
-    top: 10%;
-    height: 80%;
-    width: 85%;
-}
 
 .contactoContainer p {
     font-family: Pragmatica-ExtraLight;
-    font-size: 14px;
     text-align: left;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .contactoContainer span {
@@ -185,8 +229,7 @@ a:link {
 .contactoContainer form {
     text-align: left;
     margin-top: 25px;
-    margin-bottom: 25px;
-
+    margin-left:15px;
 }
 
 .contactoContainer input {
@@ -217,14 +260,14 @@ a:link {
 
 .infolink {
     position: absolute;
-    bottom: 2em;
-    left: 2em;
+    bottom: 15px;
+    left: 15px;
 }
 
 .reservalink {
     position: absolute;
-    bottom: 2em;
-    right: 2em; /*calc ancho imagen*/
+    bottom: 15px;
+    right: 15px; /*calc ancho imagen*/
 
 }
 
