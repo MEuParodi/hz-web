@@ -7,41 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haizea</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body id="info">
     <header>
-        <div class="mobile barOnTop">
-            <a href="./home.html"><img class="logoHaizea" src="img/haizea.jpg" alt="Icono logo"></a>
+        <div class="mobile headerMobile">
+            <a href="./home.html"><img class="logoHImg" src="img/logoH_blanco.png" alt="Icono logo"></a>
             <a href="./menu.html"><img class="hambImg" src="img/hamburger.jpg" alt="Icono menú"></a>
+        </div>
+
+        <div class="desktop headerDesktop">
+            <a href="./info.html">
+                <p class="navlink">INFO</p>
+            </a>
+                <a class="centered" href="./home.html"><img class="logoHaizeaHotel" src="img/logoHH_blanco.png" alt="Icono logo"></a>
+            <a href="./contacto.html">
+                <p class="navlink">CONTACTO</p>
+            </a>
         </div>
     </header>
 
-    <main class="infoContainer">
-        <div class="infoText">
-            <p>En el Hotel Haizea, donde las montañas se erigen majestuosas, te ofrecemos un refugio a 400 metros de la playa. 
-                Nuestro castillo cuenta con 10 habitaciones con vista a cada rincón de las montañas vascas, un espacio de co-working, terrazas, balcones, jardines y estacionamiento propio.
-                Las habitaciones fueron pensadas y ambientadas para recibirte en un ambiente calmo y cálido, donde encontrarás el verdadero descanso.
-                Dentro de nuestra propuesta, contamos con Fuego Argentino, un restaurant de carnes al asador que te sorprenderá.
-                Ven a encontrar paz en la belleza natural que rodea nuestro Haizea Hotel.</p>
 
+    <main class="infoContainer">
+        <div class="mobile infoTextMobile">
+            <p>En el Hotel Haizea, donde las montañas se erigen
+                majestuosas, te ofrecemos un refugio a 400 metros de
+                la playa. Nuestro castillo cuenta con 10 habitaciones
+                con vista a cada rincón de las motañas vascas.</p>
+            <p>Ven a encontrar paz en la belleza natural que rodea
+                nuestro Haizea Hotel.</p>
         </div>
-        <img class="imgInfo" src="img/info1.jpg" alt="room">
-        <img class="imgInfo" src="img/info2.jpg" alt="room">
+        <div class=" desktop infoTextDesktop">
+            <p>En el Hotel Haizea, donde las montañas se erigen majestuosas, te ofrecemos un refugio a 400 metros de la
+                playa.</p>
+            <p>Nuestro castillo cuenta con 10 habitaciones con vista a cada rincón de las montañas vascas, un espacio de
+                co-working, terrazas, balcones, jardines y estacionamiento propio.</p>
+            <p>Las habitaciones fueron pensadas y ambientadas para recibirte en un ambiente calmo y cálido, donde
+                encontrarás el verdadero descanso.</p>
+            <p>Dentro de nuestra propuesta, contamos con Fuego Argentino, un restaurant de carnes al asador que te
+                sorprenderá.</p>
+            <p>Ven a encontrar paz en la belleza natural que rodea nuestro Haizea Hotel.</p>
+        </div>
+
+            <div class="mobile InfoPhotosMobile">
+                <img src="img/info1.jpg" alt="room">
+                <img src="img/info2.jpg" alt="room">
+            </div>
+
+            <div class="desktop InfoPhotosDesktop"> 
+                <img src="img/info1.jpg" alt="room">
+                <img class="noShow" src="img/info2.jpg" alt="room">
+            </div>
+
+
     </main>
 
-        <footer>
-            <div class="mobile">
-                <a class="infolink" href="./info.html">INFO</a>
-                <a class="reservalink" href="https://bookings.agorapos.com/reservas/widget/1015/calendario/dfef7b0136cdcc3cea5424776a7f6e6af344fe71">RESERVAS</a>
-            </div>
-        </footer>
+    <footer>
+        <div class="mobile footerMobile">
+            <a class="infolink" href="./info.html">INFO</a>
+            <a class="reservalink"
+                href="https://bookings.agorapos.com/reservas/widget/1015/calendario/dfef7b0136cdcc3cea5424776a7f6e6af344fe71">RESERVAS</a>
+        </div>
+        <div class="desktop footerDesktop">
+            <a href="https://www.instagram.com/fuegoargentinobakio/">
+                <p class="navlink">INSTAGRAM</p>
+            </a>
+            <a class="address" href="address">
+                <p>Basigoko Bide Nagusia 134,</p>
+                <p>Bakio, Biskaia</p>
+                <p>País Vasco</p>
+            </a>
+            <a href="https://wa.me/5492494520959">
+                <p class="navlink">WHATSAPP</p>
+            </a>
+        </div>
 
+    </footer>
+    <script src="js/carousel.js"></script>
 </body>
 
 </html>
-
-
-
-
-
