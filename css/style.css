@@ -54,7 +54,6 @@ header {
     left: 0;
     right: 0;
     height: 70px;
-    border: solid 2px red;
     padding: 1em;
 }
 
@@ -64,7 +63,6 @@ main {
     bottom: 70px;
     left: 0;
     right: 0;
-    border: solid 2px blue;
     padding: 1em;
 
 }
@@ -75,7 +73,6 @@ footer {
     left: 0;
     right: 0;
     height: 70px;
-    border: solid 2px green;
     padding: 1em;
 
 }
@@ -101,11 +98,18 @@ footer {
 
 /**** links de navegación ****/
 
-.navlink{
+.navlinkLeft{
     font-family: PragmaticaBook;
     font-size: 15px;
     margin-left: 15px;
+    width: 70px;
+}
+
+.navlinkRight{
+    font-family: PragmaticaBook;
+    font-size: 15px;
     margin-right: 15px;
+    width: 70px;
 }
 
 .desktop {
@@ -132,6 +136,7 @@ p {
     font-family: Pragmatica-ExtraLight;
     font-size: 12px;
     color: white;
+    margin-top: 4px;
 }
 
 a {
@@ -148,7 +153,6 @@ a:link {
 .headerMobile {
     display: flex;
     flex-direction: column;
-    border: solid 2px red;
 }
 
 .logoHImg {
@@ -210,14 +214,10 @@ a:link {
 
 .infoContainer {
     overflow-y: scroll;
-
-    /* position:fixed;
-    top: 10%;
-    height: 70%;
-    overflow: hidden; */
 }
 
 .infoContainer p {
+    font-family: Svn-Miller;
     text-align: left;
     font-size: 10px;
 }
@@ -239,17 +239,17 @@ a:link {
 }
 
 /* contacto */
-
 .contactoContainer p {
-    font-family: Pragmatica-ExtraLight;
+    font-family: Svn-Miller;
     text-align: left;
     margin-left: 15px;
     margin-right: 15px;
 }
 
 .contactoContainer span {
-    font-family: Pragmatica-ExtraLight-Oblique;
-    font-size: 14px;
+    font-family: Svn-Miller;
+    font-style: italic;
+    font-size: 12px;
     text-align: left;
 }
 
@@ -331,7 +331,6 @@ footer p {
     main {
         top: 100px;
         bottom: 100px;
-    
     }
 
     h1 {
@@ -352,12 +351,12 @@ footer p {
         font-family: PragmaticaBook;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items:flex-start ;
     }
 
     .logoHaizeaHotel{
         width: 30%;
-      }
+    }
     
     .centered {
         display: flex;
@@ -400,6 +399,22 @@ footer p {
         width: 60%;
         overflow-y: hidden;
     }
+
+    .contactoContainer {
+        display: flex;
+    }
+
+    .contactLeft {
+        width: 100%;
+        padding-right: 30px;
+    }
+
+    .contactRightDesk {
+        display: block;
+        width: 100%;
+        padding-left: 30px;
+    }
+
     
     /* carousel */
     .noShow {

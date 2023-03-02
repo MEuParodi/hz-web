@@ -18,44 +18,59 @@
 
         <div class="desktop headerDesktop">
             <a href="./info.html">
-                <p class="navlink">INFO</p>
+                <p class="navlinkLeft">INFO</p>
             </a>
-                <a class="centered" href="./home.html"><img class="logoHaizeaHotel" src="img/logoHH_blanco.png" alt="Icono logo"></a>
+            <a class="centered" href="./home.html"><img class="logoHaizeaHotel" src="img/logoHH_blanco.png"
+                    alt="Icono logo"></a>
             <a href="./contacto.html">
-                <p class="navlink">CONTACTO</p>
+                <p class="navlinkRight">CONTACTO</p>
             </a>
         </div>
     </header>
 
     <main class="contactoContainer">
-        <p>Completa el siguiente formulario y nos comunicaremos contigo lo antes posible.</p>
-        <br>
-        <p><span>Complete the form below and we will contact you as soon as possible.</span></p>
+        <div class="contactLeft">
+            <p>Completa el siguiente formulario y nos comunicaremos contigo lo antes posible.</p>
+            <p><span>Complete the form below and we will contact you as soon as possible.</span></p>
 
-        <form action="">
-            <label for="Name">* Nombre/<span>Name</span></label>
+            <form action="">
+                <label for="Name">* Nombre/<span>Name</span></label>
+                <br>
+                <input type="text" name="name" id="name" required>
+                <br><br>
+
+                <label for="contact">* Contacto/<span>Contact Number</span></label>
+                <br>
+                <input type="text" name="contact" id="contact" required>
+                <br><br>
+
+                <label for="contactText">Mensaje/<span>Message</span></label>
+                <br>
+                <a id="email" href="">
+                    <input type="textarea" name="contactText" id="contactText"></a>
+                <br><br>
+            </form>
+        </div>
+        <div class="mobile contactRightMOb">
+            <p>Comunicate con nosotros a través de los siguientes medios de contacto.</p>
+            <p><span>Contact us through the following options.</span></p>
             <br>
-            <input type="text" name="name" id="name" required>
+            <p><b>E-mail</b> / reservas@haizeahotel.com</p>
+            <p><b>Tel</b> / +94 655 6583 / +34 695 210 877</p>
+            <p><b>Instagram</b> / @haizeahotel</p>
+        </div>
+        <div class="desktop contactRightDesk">
+            <p>Comunicate con nosotros a través de los siguientes medios de contacto.</p>
+            <p><span>Contact us through the following options.</span></p>
             <br><br>
-
-            <label for="contact">* Contacto/<span>Contact Number</span></label>
+            <p><b>E-mail</b> / reservas@haizeahotel.com</p>
             <br>
-            <input type="text" name="contact" id="contact" required>
-            <br><br>
-
-            <label for="contactText">Mensaje/<span>Message</span></label>
+            <p><b>Tel</b> / +94 655 6583 / +34 695 210 877</p>
             <br>
-            <a id="email" href="">
-                <input type="textarea" name="contactText" id="contactText"></a>
-            <br><br>
-        </form>
+            <p><b>Instagram</b> / @haizeahotel</p>
+        </div>
 
-        <p>Comunicate con nosotros a través de los siguientes medios de contacto.</p>
-        <p><span>Contact us through the following options.</span></p>
-        <br>
-        <p><b>E-mail</b> / reservas@haizeahotel.com</p>
-        <p><b>Tel</b> / +94 655 6583 / +34 695 210 877</p>
-        <p><b>Instagram</b> / @haizeahotel</p>
+
 
     </main>
 
@@ -67,7 +82,7 @@
         </div>
         <div class="desktop footerDesktop">
             <a href="https://www.instagram.com/fuegoargentinobakio/">
-                <p class="navlink">INSTAGRAM</p>
+                <p class="navlinkLeft">INSTAGRAM</p>
             </a>
             <a class="address" href="address">
                 <p>Basigoko Bide Nagusia 134,</p>
@@ -75,11 +90,13 @@
                 <p>País Vasco</p>
             </a>
             <a href="https://wa.me/5492494520959">
-                <p class="navlink">WHATSAPP</p>
+                <p class="navlinkRight">WHATSAPP</p>
             </a>
         </div>
-
     </footer>
+
     <script type "text/javscript" src="js/mail.js"></script>
 
 </body>
+
+</html>
