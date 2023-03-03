@@ -56,12 +56,25 @@
             <img src="img/info2.jpg" alt="room">
         </div>
 
-        <div class="desktop InfoPhotosDesktop">
-            <img src="img/info1.jpg" alt="room">
-            <img class="noShow" src="img/info2.jpg" alt="room">
+        <div class="sliderContainer"> 
+            <div class="slider">
+          <input class="slider__dot" type="radio" name="slider" title="slide1" checked="checked"/>
+          <input class="slider__dot" type="radio" name="slider" title="slide2"/>
+        
+          <div class="slider__inner">
+            <div class="slider__body" onclick="showimg('img/info1.jpg')">
+              <img class="slider__image" src="img/info1.jpg" alt="room">
+             
+            </div>
+            <div class="slider__body">
+              <img class="slider__image" src="img/info1.jpg" alt="room">
+
+            </div>
+           
+          </div>
         </div>
-
-
+        </div>
+        
     </main>
 
     <footer>
