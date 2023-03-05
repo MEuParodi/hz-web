@@ -44,7 +44,7 @@ body {
     color:white;
     display: flex;
     height: 100%;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 /**** layout ****/
@@ -80,8 +80,8 @@ footer {
 /**** backgrounds ****/
 #home {
     background-image: url("../img/mobileHome.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #info {
@@ -115,6 +115,7 @@ footer {
 .desktop {
     display:none;
 }
+
 
 /**** generales ****/
 h1 {
@@ -192,7 +193,7 @@ a:link {
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-align: center;  
+        text-align: center;
 }
 .menu{
     font-size: 20px;
@@ -219,7 +220,7 @@ a:link {
 .infoContainer p {
     font-family: Svn-Miller;
     text-align: left;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .infoTextMobile {
@@ -285,12 +286,6 @@ footer p {
     color: white;
 }
 
-/* .footerMobile a {
-    font-family: PragmaticaBook;
-    font-size: 15px;
-    color: white;
-} */
-
 .infolink {
     position: absolute;
     bottom: 15px;
@@ -300,7 +295,7 @@ footer p {
 .reservalink {
     position: absolute;
     bottom: 15px;
-    right: 15px; 
+    right: 15px;
 }
 
 /* *** desktop layout  *** */
@@ -309,7 +304,7 @@ footer p {
     .mobile {
         display: none;
     }
-    
+
     .desktop {
         display:flex;
     }
@@ -336,7 +331,7 @@ footer p {
     h1 {
         font-size: 40px;
     }
-    
+
     h2 {
         font-family:Svn-Miller;
         font-size: 50px;
@@ -346,7 +341,7 @@ footer p {
         font-family:PragmaticaBook;
         font-size: 45px;
     }
-    
+
     .headerDesktop {
         font-family: PragmaticaBook;
         display: flex;
@@ -357,7 +352,7 @@ footer p {
     .logoHaizeaHotel{
         width: 30%;
     }
-    
+
     .centered {
         display: flex;
         align-items: center;
@@ -365,7 +360,6 @@ footer p {
     }
 
     .infoContainer {
-        flex-wrap: wrap;
         display: flex;
         justify-content: center;
     }
@@ -375,12 +369,13 @@ footer p {
         display:block;
         width: 40%;
         padding-right: 15px;
+        margin-bottom: 15px;
     }
 
     .InfoPhotosDesktop {
         width: 60%;
     }
-    
+
     .footerDesktop {
         font-family: PragmaticaBook;
         font-size: 35pt;
@@ -388,7 +383,7 @@ footer p {
         justify-content: space-between;
         align-items: flex-end;
     }
-    
+
     .address{
         text-align: center;
     }
@@ -396,7 +391,7 @@ footer p {
     .address p {
         font-size: 14px;
     }
-    
+
     .InfoPhotos {
         width: 60%;
         overflow-y: hidden;
@@ -417,22 +412,29 @@ footer p {
         padding-left: 30px;
     }
 
-    
-    /* carousel */
-    .noShow {
-        display:none;
-    }
+        /* aspecto barra scroll */
+    .infoContainer::-webkit-scrollbar {
+        width: 2px;
+      }
 
+      .infoContainer::-webkit-scrollbar-track {
+        background: #eaeaea;
+        border-radius: 0.8px;
+      }
 
-}
+      .infoContainer::-webkit-scrollbar-thumb {
+        border-radius: 1px;
+        background: rgb(187, 187, 187);
+      }
 
-.sliderContainer {
-    /* Ajustar al ancho de la img */
-    width: 670px;
-}
+    /**** slider ****/
+/* .sliderContainer {
+    width: 50%;  /* Ajustar al ancho de la img 
+} */
 
-.slider {
-    min-height: 50vh ;
+.slider { /*tiene las dos fotos*/
+    min-height: 55vh ;
+    min-width: 500px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -463,45 +465,34 @@ footer p {
             animation: check 0.5s linear forwards;
   }
   .slider__dot:checked:nth-of-type(1) ~ .slider__inner {
-    transform: translateX(0%);
+    transform: translateX(0%); /*translada a la primera foto*/
   }
   .slider__dot:checked:nth-of-type(2) ~ .slider__inner {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /*translada a la segunda foto*/
   }
   .slider__inner {
+    /* background-color: grey; */
     position: absolute;
     top: 0;
     left: 0;
-    width: 250%;
+    width: 200%; /*ancho que translada??*/
     height: 100%;
-    transition: all 1s ease-out;
+    transition: all 1s ease-out; /*efecto de transicion*/
     display: flex;
-    flex-flow: row nowrap;
+    /* flex-flow: row nowrap; */
   }
   .slider__body {
+    width: 100%;
     display: flex;
-    flex: 1;
-    flex-flow: column nowrap;
+    /* flex: 1; */
+    /* flex-flow: column nowrap; */
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    text-align: center;
   }
   .slider__image {
-    font-size: 2.7rem;
-    margin-bottom: 2rem;
+    width: 100%;
   }
-  .slider__caption {
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-  .slider__text {
-    color: #999;
-    margin-bottom: 3rem;
-    max-width: 300px;
-  }
-    
+
   @-webkit-keyframes check {
     50% {
       outline-color: #333;
@@ -512,7 +503,7 @@ footer p {
       box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
     }
   }
-  
+
   @keyframes check {
     50% {
       outline-color: #333;
@@ -523,3 +514,4 @@ footer p {
       box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
     }
   }
+}
