@@ -88,14 +88,18 @@ footer {
     background-color: #AFCBCD;
 }
 
-#menu{
+#menu {
     background-color: #AFCBCD;
 }
 
-#contacto{
+#contacto {
     background-color: #94AB9B;
 }
 
+#fullScrImg {
+    background-color: black;
+
+}
 /**** links de navegación ****/
 
 .navlinkLeft{
@@ -284,6 +288,7 @@ footer p {
     font-family: Svn-Miller;
     font-size: 13px;
     color: white;
+    margin-top: 0px;
 }
 
 .infolink {
@@ -361,15 +366,19 @@ footer p {
 
     .infoContainer {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        margin-left: 15px;
+        margin-right: 15px;
+        overflow: hidden;
+        align-items: flex-start;
     }
 
     .infoTextDesktop {
-        min-width: 200px;
+        min-width: 250px;
         display:block;
         width: 40%;
-        padding-right: 15px;
-        margin-bottom: 15px;
+        padding-right: 35px;
+        font-size: 14px;
     }
 
     .InfoPhotosDesktop {
@@ -434,7 +443,8 @@ footer p {
 
 .slider { /*tiene las dos fotos*/
     min-height: 55vh ;
-    min-width: 500px;
+    width: 55%;
+    min-width: 700px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -486,11 +496,12 @@ footer p {
     display: flex;
     /* flex: 1; */
     /* flex-flow: column nowrap; */
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
   .slider__image {
     width: 100%;
+    min-height: 300px;
   }
 
   @-webkit-keyframes check {
@@ -514,4 +525,33 @@ footer p {
       box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
     }
   }
+
+/* slider en pantalla completa */
+
+.sliderFullscreen {
+    position: fixed;
+    top: 70px;
+    left: 2%;
+    width: 96%;
+    height: 70%;
+    z-index: 30;
+    /* overflow: hidden; */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+/* .fullscreen .slider__inner {
+    width: 100%;
+    height: 100%;
+    border: none;
+} */
+
+/* .fullscreen.show {
+    display: inherit;
+} */ 
+
+
 }
