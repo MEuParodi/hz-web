@@ -33,7 +33,7 @@
             <p>Completa el siguiente formulario y nos comunicaremos contigo lo antes posible.</p>
             <p><span>Complete the form below and we will contact you as soon as possible.</span></p>
 
-            <form action="">
+            <form action="sendMailHosting.php" method="post">
                 <label for="Name">* Nombre / <span>Name</span></label>
                 <br>
                 <input type="text" name="name" id="name" required>
@@ -49,12 +49,12 @@
                 <input type="email" name="email" id="email" required>
                 <br><br>
 
-                <label for="contactText">Mensaje / <span>Message</span></label>
+                <label for="message">Mensaje / <span>Message</span></label>
                 <br>
                 <textarea id="message" name="message"></textarea>
                 <br><br>
-
-                <button>Enviar / <span>Send</span></button>
+                <!-- <input type="submit" name="sendEmail" id="sendEmail" value="send"> -->
+                <button type="submit" id="sendEmail" value="sendEmail">Enviar / <span>Send</span></button>
             </form>
         </div>
         <div class="mobile contactRightMOb">
@@ -63,7 +63,7 @@
             <br>
             <p><b>E-mail</b> / reservas@haizeahotel.com</p>
             <p><b>Tel</b> / +94 655 6583 / +34 695 210 877</p>
-            <p><b>Instagram</b> / @haizeahotel</p>
+            <p><a href="https://www.instagram.com/fuegoargentinobakio/"><u>Instagram</u></a> / @haizeahotel</p>
         </div>
         <div class="desktop contactRightDesk">
             <p>Comunicate con nosotros a través de los siguientes medios de contacto.</p>
