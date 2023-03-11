@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="home">
+<body class="hidden" id="home">
     <header>
         <div class="mobile headerMobile">
             <a href="./home.html"><img class="logoHImg" src="img/logoH_blanco.png" alt="Icono logo"></a>
@@ -53,6 +53,13 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        window.onload = function() {
+            document.body.classList.remove('hidden');
+        }
+
+    </script>
 
 </body>
 
