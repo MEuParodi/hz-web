@@ -5,25 +5,27 @@
 }
 
 /**** fonts ****/
+@import url('https://fonts.cdnfonts.com/css/pragmatica-extralight');
+
 @font-face {
     font-family: PragmaticaBook;
     src: url("../fonts/PragmaticaBook.otf");
 }
 @font-face {
     font-family: Svn-Miller;
-    src: url("../fonts/SVN-Miller\ Banner.ttf");
+    src: url("../fonts/SVN-MillerBanner.ttf");
 }
 @font-face {
     font-family: Pragmatica-Light;
     src: url("../fonts/Pragmatica-Light_36332.ttf");
 }
-@font-face {
+/* @font-face {
     font-family: Pragmatica-Bold;
     src: url("../fonts/Pragmatica-Bold_36314.ttf");
 }
 @font-face {
     font-family: Pragmatica-ExtraBold;
-    src: url("../fonts/Pragmatica-ExtraBold_36320.ttf");
+    src: url("../fonts/Pragmatica-ExtraBold_36320.ttf"); */
 }
 @font-face {
     font-family: Pragmatica-ExtraLight;
@@ -45,6 +47,7 @@ body {
     display: flex;
     height: 100%;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 /**** layout ****/
@@ -55,6 +58,7 @@ header {
     right: 0;
     height: 70px;
     padding: 1em;
+
 }
 
 main {
@@ -64,7 +68,7 @@ main {
     left: 0;
     right: 0;
     padding: 1em;
-
+    overflow-y: scroll;
 }
 
 footer {
@@ -74,8 +78,8 @@ footer {
     right: 0;
     height: 70px;
     padding: 1em;
-
 }
+
 
 /**** backgrounds ****/
 #home {
@@ -100,6 +104,7 @@ footer {
     background-color: black;
 
 }
+
 /**** links de navegación ****/
 
 .navlinkLeft{
@@ -122,23 +127,19 @@ footer {
 
 
 /**** generales ****/
+
 h1 {
+    font-family: Pragmatica-ExtraLight;
+    font-size: 25px;
+}
+
+h2 {
     font-family: Pragmatica-Light;
     font-size: 20px;
 }
 
-h2 {
-    font-family: Pragmatica-ExtraLight;
-    font-size: 30px;
-}
-
-h3 {
-    font-family: Pragmatica-Light;
-    font-size: 30px;
-}
-
 p {
-    font-family: Pragmatica-ExtraLight;
+    font-family: Svn-Miller;
     font-size: 12px;
     color: white;
     margin-top: 4px;
@@ -155,6 +156,7 @@ a:link {
 
 
 /****** header *****/
+
 .headerMobile {
     display: flex;
     flex-direction: column;
@@ -162,14 +164,11 @@ a:link {
 
 .logoHImg {
     width: 30%;
-    /* position: absolute;
-    top:5px;
-    left: 0px; */
 }
 
 .hambImg {
     position: fixed;
-    top:30px;
+    top:26px;
     right: 20px;
     width: 20px;
     margin-bottom: 0px;
@@ -185,22 +184,20 @@ a:link {
     position: fixed;
     top:10px;
     right: 20px;
-    /* display: flex;
-    justify-content: flex-end;
-    padding-bottom: 0;
-    margin-bottom: 0; */
 }
 
-/* home */
+/**** home ****/
+
 .subContainer{
-        position:fixed;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-}
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+    }
+
 .menu{
-    font-size: 20px;
+    font-size: 16px;
     list-style: none;
     display:flex;
     flex-direction:column;
@@ -211,7 +208,7 @@ a:link {
     padding-bottom: 20px;
 }
 
-/* info */
+/**** info ****/
 
 .InfoPhotosMobile img {
     width: 100%;
@@ -222,9 +219,22 @@ a:link {
 }
 
 .infoContainer p {
-    font-family: Svn-Miller;
     text-align: left;
     font-size: 11px;
+}
+
+.infoContainer::-webkit-scrollbar {
+    width: 2px;
+}
+
+.infoContainer::-webkit-scrollbar-track {
+    background: #eaeaea;
+    border-radius: 0.8px;
+}
+
+.infoContainer::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background: rgb(187, 187, 187);
 }
 
 .infoTextMobile {
@@ -235,7 +245,6 @@ a:link {
 }
 
 .infoTextMobile p {
-    font-family: Svn-Miller;
     font-size: 11px;
 }
 
@@ -243,20 +252,21 @@ a:link {
     width: 100%;
 }
 
-/* contacto */
+/**** contacto ****/
+
 .contactoContainer {
-    overflow: hidden;
+    font-family: Svn-Miller;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .contactoContainer p {
-    font-family: Svn-Miller;
     text-align: left;
     margin-left: 15px;
     margin-right: 15px;
 }
 
 .contactoContainer span {
-    font-family: Svn-Miller;
     font-style: italic;
     font-size: 12px;
     text-align: left;
@@ -269,7 +279,6 @@ a:link {
 
 .contactoContainer form {
     margin-right: 15px;
-    font-family: Svn-Miller;
     font-size: 12px;
     text-align: left;
     margin-top: 25px;
@@ -300,6 +309,21 @@ a:link {
     overflow-y: auto
 }
 
+    /* aspecto barra scroll */
+.contactoContainer::-webkit-scrollbar {
+    width: 2px;
+}
+
+.contactoContainer::-webkit-scrollbar-track {
+    background: #eaeaea;
+    border-radius: 0.8px;
+}
+
+.contactoContainer::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background: rgb(187, 187, 187);
+}
+
 #sendEmail {
     text-align: left;
     padding: 0;
@@ -307,16 +331,12 @@ a:link {
     border: none;
     color: white;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
-/* footer */
-.footer {
-    position: relative;
-    color:white;
-}
+/**** footer ****/
 
 footer p {
-    font-family: Svn-Miller;
     font-size: 13px;
     color: white;
     margin-top: 0px;
@@ -324,17 +344,18 @@ footer p {
 
 .infolink {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     left: 15px;
 }
 
 .reservalink {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     right: 15px;
 }
 
-/* *** desktop layout  *** */
+/**** *** desktop layout  *** ****/
+
 @media only screen and (min-width:480px) {
 
     .mobile {
@@ -352,31 +373,24 @@ footer p {
     }
 
     header {
-        height:50px;
+        height:70px;
+    }
 
+    main {
+        top: 70px;
+        bottom: 100px;
     }
 
     footer {
         height:100px;
-
-    }
-
-    main {
-        top: 50px;
-        bottom: 100px;
-
     }
 
     h1 {
-        font-size: 40px;
-    }
-
-    h2 {
         font-family:Svn-Miller;
         font-size: 50px;
     }
 
-    h3 {
+    h2 {
         font-family:PragmaticaBook;
         font-size: 45px;
     }
@@ -404,7 +418,9 @@ footer p {
         margin-left: 15px;
         margin-right: 15px;
         overflow: hidden;
+        overflow-y: scroll;
         align-items: flex-start;
+        margin-top: 5px;
     }
 
     .infoTextDesktop {
@@ -412,7 +428,10 @@ footer p {
         display:block;
         width: 40%;
         padding-right: 35px;
-        font-size: 16px;
+    }
+
+    .infoTextDesktop p {
+        font-size: 13px;
     }
 
     .InfoPhotosDesktop {
@@ -433,11 +452,7 @@ footer p {
 
     .address p {
         font-size: 14px;
-    }
-
-    .InfoPhotos {
-        width: 60%;
-        overflow-y: hidden;
+        margin: 0;
     }
 
     .contactoContainer {
@@ -456,137 +471,40 @@ footer p {
         padding-left: 30px;
     }
 
-        /* aspecto barra scroll */
+    /**** aspecto barra scroll ****/
     .infoContainer::-webkit-scrollbar {
         width: 2px;
       }
 
-      .infoContainer::-webkit-scrollbar-track {
+    .infoContainer::-webkit-scrollbar-track {
         background: #eaeaea;
         border-radius: 0.8px;
-      }
+    }
 
-      .infoContainer::-webkit-scrollbar-thumb {
+    .infoContainer::-webkit-scrollbar-thumb {
         border-radius: 1px;
         background: rgb(187, 187, 187);
-      }
+    }
 
     /**** slider ****/
-/* .sliderContainer {
-    width: 50%;  /* Ajustar al ancho de la img 
-} */
 
-.slider { /*tiene las dos fotos*/
-    min-height: 55vh ;
-    width: 55%;
-    min-width: 700px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .slider__dot {
-    width: 16px;
-    height: 16px;
-    margin: 2rem 16px;
-    border-radius: 50%;
-    z-index: 10;
-    background-color: #ccc;
-    outline: 8px solid #ccc;
-    outline-offset: -8px;
-    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-    cursor: pointer;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-  }
-  .slider__dot:checked {
-    background-color: #333;
-    -webkit-animation: check 0.5s linear forwards;
-            animation: check 0.5s linear forwards;
-  }
-  .slider__dot:checked:nth-of-type(1) ~ .slider__inner {
-    transform: translateX(0%); /*translada a la primera foto*/
-  }
-  .slider__dot:checked:nth-of-type(2) ~ .slider__inner {
-    transform: translateX(-50%); /*translada a la segunda foto*/
-  }
-  .slider__inner {
-    /* background-color: grey; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; /*ancho que translada??*/
-    height: 100%;
-    transition: all 1s ease-out; /*efecto de transicion*/
-    display: flex;
-    /* flex-flow: row nowrap; */
-  }
-  .slider__body {
-    width: 100%;
-    display: flex;
-    /* flex: 1; */
-    /* flex-flow: column nowrap; */
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .slider__image {
-    width: 100%;
-    min-height: 300px;
-  }
-
-  @-webkit-keyframes check {
-    50% {
-      outline-color: #333;
-      box-shadow: 0 0 0 16px #333, 0 0 0 48px rgba(51, 51, 51, 0.2);
+    .miniCarousel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
-    100% {
-      outline-color: #333;
-      box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+
+    .sliderFullscreen {
+        position: fixed;
+        top: 70px;
+        left: 2%;
+        width: 96%;
+        height: 70%;
+        z-index: 30;
+        /* overflow: hidden; */
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        justify-content: center;
     }
-  }
-
-  @keyframes check {
-    50% {
-      outline-color: #333;
-      box-shadow: 0 0 0 16px #333, 0 0 0 48px rgba(51, 51, 51, 0.2);
-    }
-    100% {
-      outline-color: #333;
-      box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-    }
-  }
-
-/* slider en pantalla completa */
-
-.sliderFullscreen {
-    position: fixed;
-    top: 70px;
-    left: 2%;
-    width: 96%;
-    height: 70%;
-    z-index: 30;
-    /* overflow: hidden; */
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    justify-content: center;
-
-}
-
-/* .fullscreen .slider__inner {
-    width: 100%;
-    height: 100%;
-    border: none;
-} */
-
-/* .fullscreen.show {
-    display: inherit;
-} */ 
-
-
 }
