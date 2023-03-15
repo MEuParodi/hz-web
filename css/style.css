@@ -175,6 +175,8 @@ a:link {
 
 .logoHImg {
     width: 30%;
+    opacity: 1;
+    z-index: 30;
 }
 
 .hambImg {
@@ -426,7 +428,7 @@ footer p {
 
     .infoContainer {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;;
         margin-left: 15px;
         margin-right: 15px;
         overflow: hidden;
@@ -535,5 +537,8 @@ footer p {
     .contactoContainer form {
         font-size: 14px;
     }
-    
+ 
+    #carouselExample {
+        max-width: 500px; /* relacionado el tamaño de la imagen*/
+    }
 }

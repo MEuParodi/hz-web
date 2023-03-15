@@ -18,6 +18,14 @@ body {
   position: absolute;
 }
  
+#carouselExample {
+  max-width: 800px;
+  /* height: 600px; */
+  /* Esto mantiene la relación de aspecto en 16:9 (9/16 = 56.25) */
+  height: 0;
+  padding-bottom: 56.25%; 
+}
+
 .closeImg {
     position: absolute;
     top: 20px;
