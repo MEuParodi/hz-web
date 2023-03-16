@@ -462,6 +462,7 @@ footer p {
 
     .address{
         text-align: center;
+        line-height: .9;
     }
 
     .address p {
@@ -539,6 +540,10 @@ footer p {
     }
  
     #carouselExample {
-        max-width: 500px; /* relacionado el tamaño de la imagen*/
+    }
+
+    .mainCarousel {
+        max-width: 50vw; /* relacionado el tamaño de la imagen*/
+
     }
 }
