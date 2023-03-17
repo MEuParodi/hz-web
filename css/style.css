@@ -4,41 +4,47 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.cdnfonts.com/css/pragmatica-extralight');
+/* @import url('https://fonts.cdnfonts.com/css/pragmatica-extralight'); */
 
 /**** fonts ****/
-@import url('https://fonts.cdnfonts.com/css/pragmatica-extralight');
+/* @import url('https://fonts.cdnfonts.com/css/pragmatica-extralight'); */
 
 @font-face {
-    font-family:'PragmaticaBook', sans-serif;
-    src: url("../fonts/PragmaticaBook.otf");
+    font-family: 'MiFuente';
+    src: url('ruta/a/la/fuente.ttf') format('truetype');
+  }
+
+
+@font-face {
+    font-family:'PragmaticaBook';
+    src: url("../fonts/PragmaticaBook.otf") format('opentype');;
 }
 @font-face {
-    font-family:'Svn-Miller', sans-serif;
-    src: url("../fonts/SVN-Miller_Banner.ttf");
+    font-family:'Svn-Miller';
+    src: url("../fonts/SVN-Miller_Banner.ttf") format('truetype');
 }
 @font-face {
-    font-family:'Pragmatica-Light', sans-serif;
-    src: url("../fonts/Pragmatica-Light_36332.ttf");
+    font-family:'Pragmatica-Light';
+    src: url("../fonts/Pragmatica-Light_36332.ttf") format('truetype');
 }
 @font-face {
-    font-family: 'Pragmatica-Bold', sans-serif;
-    src: url("../fonts/Pragmatica-Bold_36314.ttf");
+    font-family: 'Pragmatica-Bold';
+    src: url("../fonts/Pragmatica-Bold_36314.ttf") format('truetype');
 }
 @font-face {
-    font-family:'Pragmatica-ExtraBold', sans-serif;
+    font-family:'Pragmatica-ExtraBold';
     src: url("../fonts/Pragmatica-ExtraBold_36320.ttf");
 }
 @font-face {
-    font-family: 'Pragmatica ExtraLight', sans-serif;
+    font-family: 'Pragmatica ExtraLight';
     src: url("../fonts/Pragmatica-ExtraLight_36322.ttf");
 }
 @font-face {
-    font-family:'Pragmatica-ExtraLight-Oblique', sans-serif;
+    font-family:'Pragmatica-ExtraLight-Oblique';
     src: url("../fonts/Pragmatica-ExtraLight-Oblique_36321.ttf");
 }
 @font-face {
-    font-family:'Pragmatica-Medium', sans-serif;
+    font-family:'Pragmatica-Medium';
     src: url("../fonts/Pragmatica-Medium_36334.ttf");
 
 }
@@ -119,14 +125,14 @@ footer {
 /**** links de navegación ****/
 
 .navlinkLeft{
-    font-family: 'Pragmatica ExtraLight', sans-serif;
+    font-family: 'PragmaticaBook';
     font-size: 15px;
     margin-left: 15px;
     width: 70px;
 }
 
 .navlinkRight{
-    font-family: 'Pragmatica ExtraLight', sans-serif;
+    font-family: 'PragmaticaBook';
     font-size: 15px;
     margin-right: 15px;
     width: 70px;
@@ -140,12 +146,12 @@ footer {
 /**** generales ****/
 
 h1 {
-    font-family: 'Pragmatica ExtraLight', sans-serif;
+    font-family: 'Svn-Miller';
     font-size: 25px;
 }
 
 h2 {
-    font-family: 'Pragmatica ExtraLight', sans-serif;
+    font-family: 'PragmaticaBook';
     font-size: 20px;
 }
 
@@ -396,17 +402,17 @@ footer p {
     }
 
     footer {
-        height:100px;
+        height:70px;
     }
 
     h1 {
-        font-family:Svn-Miller;
-        font-size: 50px;
+        font-family:'Svn-Miller';
+        font-size: 40px;
     }
 
     h2 {
-        font-family:PragmaticaBook;
-        font-size: 45px;
+        font-family:'PragmaticaBook';
+        font-size: 35px;
     }
 
     .headerDesktop {
