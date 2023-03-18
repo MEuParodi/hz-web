@@ -100,9 +100,12 @@ footer {
 /**** backgrounds ****/
 
 #home {
-    background-image: url("../img/mobileHome.jpg");
+    background-image: url("../img/FondoMobile.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
 }
 
 #info {
@@ -176,27 +179,22 @@ a:link {
 
 .headerMobile {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.logoHImg {
-    width: 25%;
-    opacity: 1;
-    z-index: 30;
+img.logoHImg {
+    width: 80px;
 }
 
-.hambImg {
-    position: fixed;
-    top:26px;
-    right: 20px;
+img.hambImg {
     width: 20px;
-    margin-bottom: 0px;
 }
 
 .closeImg {
-    width: 30px;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    width: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .close{
@@ -387,9 +385,7 @@ footer p {
     }
 
     #home {
-        background-image: url("../img/desktopHome.jpg");
-        background-repeat: no-repeat;
-        background-size:cover;
+        background-image: url("../img/FondoDesktop.png");
     }
 
     header {
