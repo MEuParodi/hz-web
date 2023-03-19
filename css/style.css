@@ -53,13 +53,13 @@ body {
     font-family: Pragmatica-Light;
     color:white;
     display: flex;
+    flex-direction: column;
     height: 100%;
     min-height: 100vh;
     overflow: hidden;
-    /* opacity: 1;
-    transition: opacity 0.5s ease-in-out; */
 }
 
+/* improve image performance */
 .hidden {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -68,44 +68,48 @@ body {
 /**** layout ****/
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
     padding: 1em;
+}
 
+.headerMobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 main {
-    position: absolute;
-    top: 70px;
-    bottom: 70px;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 80vh;
     padding: 1em;
     overflow-y: scroll;
+
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
+    width: 100%;
+    height: 10vh;
     padding: 1em;
 }
 
+.footerMobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 /**** backgrounds ****/
-
 #home {
     background-image: url("../img/FondoMobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-
 }
 
 #info {
@@ -125,17 +129,12 @@ footer {
 
 }
 
-/**** links de navegación ****/
-
 .desktop {
     display:none;
 }
 
-
-/**** generales ****/
-
 h1 {
-    font-family: 'Svn-Miller';
+    font-family: Svn-Miller;
     font-size: 25px;
 }
 
@@ -146,7 +145,7 @@ h2 {
 
 p {
     font-family: Svn-Miller, serif;
-    font-size: 12px;
+    font-size: 14px;
     color: white;
     margin-top: 4px;
 }
@@ -162,13 +161,6 @@ a:link {
 
 
 /****** header *****/
-
-.headerMobile {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 img.logoHImg {
     width: 80px;
 }
@@ -190,15 +182,13 @@ img.hambImg {
 }
 
 /**** home ****/
-
 .subContainer{
-    height: 50vh;
+    height:50vh;
     width: 100%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 70px; */
     overflow: hidden;
 }
 
@@ -215,7 +205,6 @@ img.hambImg {
 }
 
 /**** info ****/
-
 .InfoPhotosMobile img {
     width: 100%;
 }
@@ -226,7 +215,6 @@ img.hambImg {
 
 .infoContainer p {
     text-align: left;
-    font-size: 11px;
 }
 
 .infoContainer::-webkit-scrollbar {
@@ -250,10 +238,6 @@ img.hambImg {
     padding-right: 15px;
 }
 
-.infoTextMobile p {
-    font-size: 11px;
-}
-
 .InfoPhotosMobile {
     width: 100%;
 }
@@ -274,18 +258,18 @@ img.hambImg {
 
 .contactoContainer span {
     font-style: italic;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
 }
 
 .contactoContainer label {
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
 }
 
 .contactoContainer form {
     margin-right: 15px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
     margin-top: 25px;
     margin-left:15px;
@@ -340,31 +324,15 @@ img.hambImg {
     cursor: pointer;
 }
 
-/**** footer ****/
-
-footer p {
-    font-size: 13px;
-    color: white;
-    margin-top: 0px;
-}
-
-.infolink {
-    position: absolute;
-    bottom: 20px;
-    left: 15px;
-}
-
-.reservalink {
-    position: absolute;
-    bottom: 20px;
-    right: 15px;
-}
-
 /**** *** desktop layout  *** ****/
 
 @media only screen and (min-width:480px) {
 
     .mobile {
+        display: none;
+    }
+    
+    #mobile {
         display: none;
     }
 
@@ -391,6 +359,7 @@ footer p {
     }
 
     main {
+        height: 70vh;
         top: 15vh;
         bottom: 15vh;
     }
@@ -410,12 +379,10 @@ footer p {
     }
 
     h1 {
-        font-family:'Svn-Miller';
         font-size: 5vw;
     }
 
     h2 {
-        font-family:'PragmaticaBook';
         font-size: 4vw;
     }
 
@@ -438,7 +405,7 @@ footer p {
     }
 
     .logoHaizeaHotel {
-        width: 30vw;
+        width: 25vw;
     }
 
     .centered {
@@ -466,7 +433,7 @@ footer p {
     }
 
     .infoTextDesktop p {
-        font-size: 1.1vw;
+        font-size: 14px;
     }
 
     .InfoPhotosDesktop {
@@ -516,7 +483,6 @@ footer p {
     }
 
     /**** slider ****/
-
     .miniCarousel {
         display: flex;
         flex-direction: column;
@@ -556,4 +522,44 @@ footer p {
     .mainCarousel {
         max-width: 50vw; /* relacionado el tamaño de la imagen*/
     }
+}
+
+@media only screen and (min-width:480px) and (max-width:1000px) {
+
+    .navlinkLeft{
+        font-size: 16px;
+    }
+    
+    .navlinkRight{
+        font-size: 16px;
+    }
+
+    .logoHaizeaHotel {
+        width: 35vw;
+    }
+
+    .InfoPhotosDesktop {
+        width: 60%;
+    }
+
+    .address p {
+        font-size: 14px;
+    }
+
+    .contactoContainer p {
+        font-size: 14px;
+    }
+
+    .contactoContainer span {
+        font-size: 14px;
+    }
+
+    .contactoContainer label {
+        font-size: 14px;
+    }
+
+    .contactoContainer form {
+        font-size: 14px;
+    }
+
 }
