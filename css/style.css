@@ -84,7 +84,6 @@ main {
     left: 0;
     right: 0;
     padding: 1em;
-    overflow-y: scroll;
 }
 
 footer {
@@ -383,7 +382,7 @@ footer p {
         display: flex;
         height: 15vh;
         font-family: PragmaticaBook;
-
+        padding: 2em;
     }
 
     header .desktop {
@@ -402,6 +401,7 @@ footer p {
         display: flex;
         height: 15vh;
         font-family: PragmaticaBook;
+        padding: 2em;
     }
 
     footer .desktop {
